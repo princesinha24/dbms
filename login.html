@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Songify:Discover Your Music</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Songify:Discover Your Music</h1>
+        <a href="songify.html">HOME</a>
+        <hr>
+        <div class="new_account">
+            <a href="new.html"><button>new account</button></a>
+        </div>
+        <form class="form" method="POST">
+            <h2>LOGIN</h2>
+            <label>user id</label>
+            <input type="text" name="userid" placeholder="user id"><br>
+            <label>password</label>
+            <input type="password" name="pwd" id="pwd" placeholder="password">
+            <input type="checkbox" onclick="show()">
+            <br>
+            <button type="submit">Log In</button> 
+        </form>
+        <script>
+            function show(){
+                var pas=document.getElementById("pwd");
+                if(pas.type==="password"){
+                    pas.type="text";
+                }
+                else{
+                    pas.type="password";
+                }
+            }
+        </script>
+    </body>
+</html>

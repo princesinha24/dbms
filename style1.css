@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+body{
+    background-image: url(music1.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 2.0;
+}
+#fav{
+    float: left;
+}
+#sea{
+    float: right;
+}
+
+.tab{
+    clear: both;
+    margin: 50px auto;
+    height: 500px;
+    overflow: auto;
+    text-align: center;
+    width: 800px;
+}
+table{
+    margin: 0px auto;
+}
+.box{
+   clear: both; 
+}
+.extra{
+    float: left;
+    width: 22%;
+    margin: 10px 10px;
+    height: 200px;
+    overflow: auto;
+    text-align: center;
+    border: 1px solid black;
+}
+h2{
+    font-style: italic;
+}
+h4{
+    font-style: inherit;
+}
