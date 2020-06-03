@@ -10,7 +10,12 @@ body{
     background-size: cover;
     opacity: 2.0;
 }
+.add{
+    float: left;
+    margin-bottom: 10px;
+}
 #fav{
+    clear: both;
     float: left;
 }
 #sea{

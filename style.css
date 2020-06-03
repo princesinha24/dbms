@@ -13,3 +13,6 @@ body{
 .form{
     margin:100px auto;
 }
+.header{
+    text-align: left;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Songify:Discover Your Music</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Songify:Discover Your Music</h1>
+        <div class="header">
+            <a href="songify.html">HOME</a>&nbsp;
+            <a href="contact.html">Contact</a>&nbsp;
+            <a href="login.html">Log Out</a>
+            <hr>
+        </div>
+        <form class="form" method="POST" action="acc.php">
+            <h2>ADD SONG</h2>
+            <label>Song</label>
+            <input type="text" name="sname" placeholder="Song name"><br>
+            <label>Album</label>
+            <input type="text" name="album" placeholder="album"><br>
+            <label>Artist</label>
+            <input type="text" name="artist" placeholder="artist"><br>
+            <label>Genre</label>
+            <input type="text" name="genre" placeholder="genre"><br>
+            <label>Mood</label>
+            <input type="text" name="mood" placeholder="mood"><br>
+            <label>Rating</label>
+            <input type="text" name="rate" placeholder="rating out of 5"><br>
+            <button type="submit">Add Song</button>
+        </form>
+        <script>
+            function show(){
+                var pas=document.getElementById("pwd");
+                if(pas.type==="password"){
+                    pas.type="text";
+                }
+                else{
+                    pas.type="password";
+                }
+            }
+        </script>
+    </body>
+</html>
