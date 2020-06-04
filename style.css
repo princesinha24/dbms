@@ -11,8 +11,16 @@ body{
     float: right;
 }
 .form{
-    margin:100px auto;
+    margin:100px auto 200px;
 }
-.header{
+table{
+    margin: 30px auto;
+    text-align: center;
+    font-weight: bold;
+}
+.guide{
+    float:right;
+}
+.con{
     text-align: left;
 }
