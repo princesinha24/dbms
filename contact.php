@@ -34,18 +34,19 @@ session_start();
     <h2>About Us</h2>
     <p>
     With Songify, it’s easy to find the right music for every moment – on your phone, your computer, your tablet and more.
-    There are millions of tracks and episodes on Spotify. So whether you’re behind the wheel, working out, partying or relaxing, the right music or podcast is always at your fingertips. Choose what you want to listen to, or let Spotify surprise you.
-    You can also browse through the collections of friends, artists, and celebrities, or create a radio station and just sit back.
+    There are hundred of tracks on Songify. So whether you’re behind the wheel, working out, partying or relaxing, the right music is always at your fingertips. Choose what you want to listen to, or let Songify surprise you.
+    You can also browse through the collections of artists or create a radio playlist and enjoy.
 
     Soundtrack your life with Songify, discover and enjoy!!
     </p>
     <table>
-        <tr><td>Dipanshu Barnwal</td><td>181EC212</td></tr>
         <tr><td>Prince Sinha</td><td>181EC133</td></tr>
+        <tr><td>Dipanshu Barnwal</td><td>181EC212</td></tr>
         <tr><td>Tarun V</td><td>181EC249</td></tr>
-        <tr><td>Sai Ritwik</td><td>181EC220</td></tr>
+        <tr><td>K V Sai Ritwik</td><td>181EC220</td></tr>
     </table>
-    <h3 class="guide">Guided by: Ajay Pratap</h3>
+    <h3 class="guide">Guided by:Dr Ajay Pratap,
+         Assistant Professor CSE Dept, NITK</h3>
     </div>
     </body>
     </html>
