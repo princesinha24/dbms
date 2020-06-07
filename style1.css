@@ -10,12 +10,7 @@ body{
     background-size: cover;
     opacity: 2.0;
 }
-.add{
-    float: left;
-    margin-bottom: 10px;
-}
 #fav{
-    clear: both;
     float: left;
 }
 #sea{
@@ -42,7 +37,7 @@ table{
     margin: 10px 10px;
     height: 200px;
     overflow: auto;
-    text-align: center;
+    text-align: left;
     border: 1px solid black;
 }
 h2{
@@ -50,4 +45,14 @@ h2{
 }
 h4{
     font-style: inherit;
+}
+.logout{
+    float: right;
+}
+hr{
+    clear: both;
+}
+.add{
+    float: left;
+    margin-bottom: 10px;
 }

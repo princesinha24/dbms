@@ -1,13 +1,12 @@
 <?php
-    $name=$_POST['Name'];
-    $userid=$_POST['userid'];
-    $gmail=$_POST['gmail'];
-    $pwd=$_POST['pwd'];
-    if(!empty($name)&&!empty($userid)&&!empty($gmail)&&!empty($pwd)){
+
+    $message="";
+    
+    if(isset($_POST['cre'])){
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "dbms";
+        $dbname = "songify(sql).sql";
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,18 +16,22 @@
             die("Connection failed: " . $conn->connect_error);
         }
         else{
-            $select="SELECT userid FROM register WHERE userid=?";
+            $name=$_POST['Name'];
+            $gmail=$_POST['gmail'];
+            $pwd=$_POST['pwd'];
+            if(!empty($name)&&!empty($gmail)&&!empty($pwd)){
+            $select="SELECT Email FROM user WHERE Email=?";
             $stmt=$conn->prepare($select);
-            $stmt->bind_param("s",$userid);
+            $stmt->bind_param("s",$gmail);
             $stmt->execute();
-            $stmt->bind_result($userid);
+            $stmt->bind_result($gmail);
             $stmt->store_result();
             $no=$stmt->num_rows;
             $stmt->close();
             if($no==0){
-                $sql="INSERT INTO register (name, userid, email, password) VALUES (?,?,?,?)";
+                $sql="INSERT INTO user ( UserName, Password,Email) VALUES (?,?,?)";
                 $stmt=$conn->prepare($sql);
-                $stmt->bind_param("ssss",$name,$userid,$gmail,$pwd);
+                $stmt->bind_param("sss",$name,$pwd,$gmail);
                 if($stmt->execute()==TRUE){
                     $message="user id has been created";
                     $stmt->close();
@@ -38,10 +41,12 @@
                 $message="userid already exist";
             }
         }
+        else{
+            $message="Fill the complete form";
+        }
+        $conn->close();
     }
-    else{
-        $message="fill the complete form";
-    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,21 +62,19 @@
             echo "<div style='color:red'>".$message."</div>";
         ?>
         <div class="new_account">
-            <a href="login.html"><button>Log In</button></a>
+            <a href="login.php"><button>Log In</button></a>
         </div>
         <form  method="POST" class="form">
             <h2>Create Account</h2>
             <label>Name</label>
             <input type="text" name="Name" placeholder="Name"><br>
-            <label>user id</label>
-            <input type="text" name="userid" placeholder="user id"><br>
             <label>email id</label>
-            <input type="email" name="gmail" placeholder="emai id"><br>
+            <input type="email" name="gmail" placeholder="email id"><br>
             <label>password</label>
             <input type="password" name="pwd" id="pwd" placeholder="password">
             <input type="checkbox" onclick="show()">
             <br>
-            <input type="submit" value="Create Account">
+            <input type="submit" value="Create Account" name="cre">
         </form>
         <script>
             function show(){
